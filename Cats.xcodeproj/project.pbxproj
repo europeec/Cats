@@ -19,6 +19,8 @@
 		F02D93BD26C1659B0034736A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93BC26C1659B0034736A /* Builder.swift */; };
 		F02D93BF26C1661C0034736A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93BE26C1661C0034736A /* MainPresenter.swift */; };
 		F02D93C126C166810034736A /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93C026C166810034736A /* Cat.swift */; };
+		F02D93C426C167450034736A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93C326C167450034736A /* NetworkService.swift */; };
+		F02D93C626C16CA50034736A /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93C526C16CA50034736A /* SearchModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F02D93BC26C1659B0034736A /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		F02D93BE26C1661C0034736A /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		F02D93C026C166810034736A /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		F02D93C326C167450034736A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F02D93C526C16CA50034736A /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 				F02D939D26C1640C0034736A /* ViewController.swift */,
 				F02D939F26C1640C0034736A /* Main.storyboard */,
 				F02D93BC26C1659B0034736A /* Builder.swift */,
+				F02D93C226C1672B0034736A /* ServiceLayer */,
 				F02D93B926C1657E0034736A /* MainModule */,
 				F02D93A526C1640F0034736A /* Assets.xcassets */,
 				F02D93A726C1640F0034736A /* LaunchScreen.storyboard */,
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				F02D93C026C166810034736A /* Cat.swift */,
+				F02D93C526C16CA50034736A /* SearchModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +121,14 @@
 				F02D93BE26C1661C0034736A /* MainPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F02D93C226C1672B0034736A /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F02D93C326C167450034736A /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +205,9 @@
 				F02D93A426C1640C0034736A /* Cats.xcdatamodeld in Sources */,
 				F02D93BF26C1661C0034736A /* MainPresenter.swift in Sources */,
 				F02D939E26C1640C0034736A /* ViewController.swift in Sources */,
+				F02D93C626C16CA50034736A /* SearchModel.swift in Sources */,
 				F02D939A26C1640C0034736A /* AppDelegate.swift in Sources */,
+				F02D93C426C167450034736A /* NetworkService.swift in Sources */,
 				F02D93C126C166810034736A /* Cat.swift in Sources */,
 				F02D939C26C1640C0034736A /* SceneDelegate.swift in Sources */,
 				F02D93B626C1656B0034736A /* MainViewController.swift in Sources */,

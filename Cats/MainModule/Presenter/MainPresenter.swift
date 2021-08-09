@@ -12,5 +12,6 @@ protocol MainViewProtocol: AnyObject {
 }
 
 protocol MainViewPresenterProtocol: AnyObject {
-    var cats: []
+    var cats: [Cat] { get set }
+    init(view: MainViewProtocol, )
 }
