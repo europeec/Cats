@@ -14,5 +14,9 @@ protocol BuilderProtocol: AnyObject {
 class Builder: BuilderProtocol {
     func createMainModule() -> UIViewController {
         let view = MainViewController()
+        let networkManager = NetworkManager()
+        let presenter = MainPresenter(view: view, networkManager: networkManager)
+        view.presenter = presenter
+        return view 
     }
 }

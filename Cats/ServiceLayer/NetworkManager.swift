@@ -8,14 +8,32 @@
 import UIKit
 
 protocol NetworkProtocol: AnyObject {
-    func loadCats(completion: @escaping (Result<Cat, Error>) -> Void)
+    func getCats(completion: @escaping (Result<[Cat], Error>) -> Void)
+    func loadCat(completion: @escaping (Result<Cat, Error>) -> Void)
     func downloadImageFromUrl(url: String, completion: @escaping (Result<UIImage, Error>) -> Void)
 }
 
 class NetworkManager: NetworkProtocol {
     let secretKey = "4f75dd5b-2292-4e33-96dc-45777e3b9158"
+    
+    func getCats(completion: @escaping (Result<[Cat], Error>) -> Void) {
+        var cats = [Cat]()
+        
+        for _ in 1...20 {
+            loadCat { result in
+                switch result {
+                case .success(let cat):
+                    cats.append(cat)
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+            
+            completion(.success(cats))
+        }
+    }
 
-    func loadCats(completion: @escaping (Result<Cat, Error>) -> Void) {
+    func loadCat(completion: @escaping (Result<Cat, Error>) -> Void) {
         guard let url = URL(string: "https://api.thecatapi.com/v1/images/search") else { return }
         
         var request = URLRequest(url: url)
