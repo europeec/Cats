@@ -21,6 +21,8 @@
 		F02D93C126C166810034736A /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93C026C166810034736A /* Cat.swift */; };
 		F02D93C426C167450034736A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93C326C167450034736A /* NetworkManager.swift */; };
 		F02D93C626C16CA50034736A /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93C526C16CA50034736A /* SearchModel.swift */; };
+		F02D93C926C187440034736A /* CatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93C726C187440034736A /* CatCollectionViewCell.swift */; };
+		F02D93CA26C187440034736A /* CatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F02D93C826C187440034736A /* CatCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		F02D93C026C166810034736A /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		F02D93C326C167450034736A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F02D93C526C16CA50034736A /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		F02D93C726C187440034736A /* CatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCollectionViewCell.swift; sourceTree = "<group>"; };
+		F02D93C826C187440034736A /* CatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			children = (
 				F02D93B426C1656B0034736A /* MainViewController.swift */,
 				F02D93B526C1656B0034736A /* MainViewController.xib */,
+				F02D93CB26C1874A0034736A /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +134,15 @@
 				F02D93C326C167450034736A /* NetworkManager.swift */,
 			);
 			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		F02D93CB26C1874A0034736A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F02D93C726C187440034736A /* CatCollectionViewCell.swift */,
+				F02D93C826C187440034736A /* CatCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +204,7 @@
 			files = (
 				F02D93A926C1640F0034736A /* LaunchScreen.storyboard in Resources */,
 				F02D93A626C1640F0034736A /* Assets.xcassets in Resources */,
+				F02D93CA26C187440034736A /* CatCollectionViewCell.xib in Resources */,
 				F02D93A126C1640C0034736A /* Main.storyboard in Resources */,
 				F02D93B726C1656B0034736A /* MainViewController.xib in Resources */,
 			);
@@ -204,6 +219,7 @@
 			files = (
 				F02D93A426C1640C0034736A /* Cats.xcdatamodeld in Sources */,
 				F02D93BF26C1661C0034736A /* MainPresenter.swift in Sources */,
+				F02D93C926C187440034736A /* CatCollectionViewCell.swift in Sources */,
 				F02D939E26C1640C0034736A /* ViewController.swift in Sources */,
 				F02D93C626C16CA50034736A /* SearchModel.swift in Sources */,
 				F02D939A26C1640C0034736A /* AppDelegate.swift in Sources */,

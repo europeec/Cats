@@ -27,6 +27,7 @@ class MainPresenter: MainViewPresenterProtocol {
     required init(view: MainViewProtocol, networkManager: NetworkProtocol) {
         self.view = view
         self.networkManager = networkManager
+        loadCats()
     }
     
     func loadCats() {
