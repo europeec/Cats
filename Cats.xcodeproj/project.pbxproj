@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F00BF59226C2C18800C64048 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00BF59126C2C18800C64048 /* Router.swift */; };
 		F0111C1026C2AE820018DB37 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0111C0E26C2AE820018DB37 /* DetailViewController.swift */; };
 		F0111C1126C2AE820018DB37 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0111C0F26C2AE820018DB37 /* DetailViewController.xib */; };
 		F0111C1326C2AED40018DB37 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0111C1226C2AED40018DB37 /* PhotoService.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F00BF59126C2C18800C64048 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F0111C0E26C2AE820018DB37 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F0111C0F26C2AE820018DB37 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		F0111C1226C2AED40018DB37 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				F02D939D26C1640C0034736A /* ViewController.swift */,
 				F02D939F26C1640C0034736A /* Main.storyboard */,
 				F02D93BC26C1659B0034736A /* Builder.swift */,
+				F00BF59126C2C18800C64048 /* Router.swift */,
 				F02D93C226C1672B0034736A /* ServiceLayer */,
 				F02D93B926C1657E0034736A /* MainModule */,
 				F0111C0A26C2AE1E0018DB37 /* DetailModule */,
@@ -269,6 +272,7 @@
 				F02D939E26C1640C0034736A /* ViewController.swift in Sources */,
 				F0111C1526C2B91E0018DB37 /* DetailPresenter.swift in Sources */,
 				F02D93C626C16CA50034736A /* SearchModel.swift in Sources */,
+				F00BF59226C2C18800C64048 /* Router.swift in Sources */,
 				F0111C1326C2AED40018DB37 /* PhotoService.swift in Sources */,
 				F02D939A26C1640C0034736A /* AppDelegate.swift in Sources */,
 				F02D93C426C167450034736A /* NetworkManager.swift in Sources */,
