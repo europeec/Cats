@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0111C1026C2AE820018DB37 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0111C0E26C2AE820018DB37 /* DetailViewController.swift */; };
+		F0111C1126C2AE820018DB37 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0111C0F26C2AE820018DB37 /* DetailViewController.xib */; };
+		F0111C1326C2AED40018DB37 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0111C1226C2AED40018DB37 /* PhotoService.swift */; };
+		F0111C1526C2B91E0018DB37 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0111C1426C2B91E0018DB37 /* DetailPresenter.swift */; };
 		F02D939A26C1640C0034736A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D939926C1640C0034736A /* AppDelegate.swift */; };
 		F02D939C26C1640C0034736A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D939B26C1640C0034736A /* SceneDelegate.swift */; };
 		F02D939E26C1640C0034736A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D939D26C1640C0034736A /* ViewController.swift */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F0111C0E26C2AE820018DB37 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F0111C0F26C2AE820018DB37 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		F0111C1226C2AED40018DB37 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		F0111C1426C2B91E0018DB37 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		F02D939626C1640C0034736A /* Cats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02D939926C1640C0034736A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F02D939B26C1640C0034736A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +65,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F0111C0A26C2AE1E0018DB37 /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				F0111C0D26C2AE4E0018DB37 /* Model */,
+				F0111C0C26C2AE450018DB37 /* Presenter */,
+				F0111C0B26C2AE3D0018DB37 /* View */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		F0111C0B26C2AE3D0018DB37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0111C0E26C2AE820018DB37 /* DetailViewController.swift */,
+				F0111C0F26C2AE820018DB37 /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0111C0C26C2AE450018DB37 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F0111C1426C2B91E0018DB37 /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F0111C0D26C2AE4E0018DB37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F02D938D26C1640C0034736A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +125,7 @@
 				F02D93BC26C1659B0034736A /* Builder.swift */,
 				F02D93C226C1672B0034736A /* ServiceLayer */,
 				F02D93B926C1657E0034736A /* MainModule */,
+				F0111C0A26C2AE1E0018DB37 /* DetailModule */,
 				F02D93A526C1640F0034736A /* Assets.xcassets */,
 				F02D93A726C1640F0034736A /* LaunchScreen.storyboard */,
 				F02D93AA26C1640F0034736A /* Info.plist */,
@@ -132,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				F02D93C326C167450034736A /* NetworkManager.swift */,
+				F0111C1226C2AED40018DB37 /* PhotoService.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -203,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F02D93A926C1640F0034736A /* LaunchScreen.storyboard in Resources */,
+				F0111C1126C2AE820018DB37 /* DetailViewController.xib in Resources */,
 				F02D93A626C1640F0034736A /* Assets.xcassets in Resources */,
 				F02D93CA26C187440034736A /* CatCollectionViewCell.xib in Resources */,
 				F02D93A126C1640C0034736A /* Main.storyboard in Resources */,
@@ -220,8 +265,11 @@
 				F02D93A426C1640C0034736A /* Cats.xcdatamodeld in Sources */,
 				F02D93BF26C1661C0034736A /* MainPresenter.swift in Sources */,
 				F02D93C926C187440034736A /* CatCollectionViewCell.swift in Sources */,
+				F0111C1026C2AE820018DB37 /* DetailViewController.swift in Sources */,
 				F02D939E26C1640C0034736A /* ViewController.swift in Sources */,
+				F0111C1526C2B91E0018DB37 /* DetailPresenter.swift in Sources */,
 				F02D93C626C16CA50034736A /* SearchModel.swift in Sources */,
+				F0111C1326C2AED40018DB37 /* PhotoService.swift in Sources */,
 				F02D939A26C1640C0034736A /* AppDelegate.swift in Sources */,
 				F02D93C426C167450034736A /* NetworkManager.swift in Sources */,
 				F02D93C126C166810034736A /* Cat.swift in Sources */,

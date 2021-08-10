@@ -18,6 +18,10 @@ class Builder: BuilderProtocol {
         let networkManager = NetworkManager()
         let presenter = MainPresenter(view: view, networkManager: networkManager)
         view.presenter = presenter
-        return view 
+        return view
     }
+
+    func createDetailModule() -> UIViewController {
+        <#code#>
+    }    
 }
