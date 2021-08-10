@@ -20,8 +20,13 @@ class CatCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    public func configure(with image: UIImage, isFavourite: Bool) {
-        imageView.image = image
+    public func configure(with image: UIImage?, isFavourite: Bool) {
+        self.alpha = 0
+        
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.alpha = 1
+            self?.imageView.image = image
+        }
         // todo: favourite
     }
 }

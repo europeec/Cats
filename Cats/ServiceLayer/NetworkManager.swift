@@ -19,17 +19,19 @@ class NetworkManager: NetworkProtocol {
     func getCats(completion: @escaping (Result<[Cat], Error>) -> Void) {
         var cats = [Cat]()
         
-        for _ in 1...20 {
+        for _ in 1...25 {
             loadCat { result in
                 switch result {
                 case .success(let cat):
                     cats.append(cat)
+                    
+                    if cats.count == 21 {
+                        completion(.success(cats))
+                    }
                 case .failure(let error):
                     completion(.failure(error))
                 }
             }
-            
-            completion(.success(cats))
         }
     }
 

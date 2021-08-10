@@ -9,6 +9,7 @@ import UIKit
 
 protocol BuilderProtocol: AnyObject {
     func createMainModule() -> UIViewController
+    func createDetailModule() -> UIViewController
 }
 
 class Builder: BuilderProtocol {

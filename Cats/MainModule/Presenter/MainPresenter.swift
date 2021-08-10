@@ -1,5 +1,5 @@
 //
-//  Presenter.swift
+//  MainPresenter.swift
 //  Cats
 //
 //  Created by Дмитрий Юдин on 09.08.2021.
@@ -8,7 +8,8 @@
 import UIKit
 
 protocol MainViewProtocol: AnyObject {
-    func show()
+    func loading()
+    func success()
     func failure()
 }
 
@@ -17,6 +18,7 @@ protocol MainViewPresenterProtocol: AnyObject {
     init(view: MainViewProtocol, networkManager: NetworkProtocol)
     func loadCats()
     func tapOnTheCat(cat: Cat)
+    func reloadData()
 }
 
 class MainPresenter: MainViewPresenterProtocol {
@@ -31,6 +33,8 @@ class MainPresenter: MainViewPresenterProtocol {
     }
     
     func loadCats() {
+        view?.loading()
+        
         networkManager.getCats { [weak self] result in
             // strong self
             guard let self = self else { return }
@@ -39,7 +43,7 @@ class MainPresenter: MainViewPresenterProtocol {
                 switch result {
                 case .success(let cats):
                     self.cats = cats
-                    self.view?.show()
+                    self.view?.success()
                 case .failure(_):
                     self.view?.failure()
                 }
@@ -48,6 +52,10 @@ class MainPresenter: MainViewPresenterProtocol {
     }
     
     func tapOnTheCat(cat: Cat) {
-//        
+        print(cat)
+    }
+    
+    func reloadData() {
+        loadCats()
     }
 }
