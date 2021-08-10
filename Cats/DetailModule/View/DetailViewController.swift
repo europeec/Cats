@@ -13,16 +13,28 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var downloadButton: UIButton!
     @IBOutlet weak var favoutireButton: UIButton!
     
+    var presenter: DetailViewPresenterProtcol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
     @IBAction func download(_ sender: Any) {
+        presenter.download()
     }
     
     @IBAction func favourite(_ sender: Any) {
+        presenter.favourite()
     }
 }
 
-//class DetailViewController:
+extension DetailViewController: DetailViewProtocol {
+    func show() {
+        DispatchQueue.main.async { [weak self] in
+            let image = self?.presenter.cat.image
+            self?.imageView.image = image
+            
+        }
+    }
+}

@@ -9,7 +9,7 @@ import UIKit
 
 protocol BuilderProtocol: AnyObject {
     func createMainModule() -> UIViewController
-    func createDetailModule() -> UIViewController
+    func createDetailModule(with cat: Cat) -> UIViewController
 }
 
 class Builder: BuilderProtocol {
@@ -21,7 +21,11 @@ class Builder: BuilderProtocol {
         return view
     }
 
-    func createDetailModule() -> UIViewController {
-        <#code#>
+    func createDetailModule(with cat: Cat) -> UIViewController {
+        let view = DetailViewController()
+        let photoService = PhotoService()
+        let presenter = DetailPresenter(view: view, photoService: photoService, cat: cat)
+        view.presenter = presenter
+        return view
     }    
 }

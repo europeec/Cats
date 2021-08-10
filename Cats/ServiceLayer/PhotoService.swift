@@ -11,7 +11,7 @@ protocol PhotoProtocol: AnyObject {
     func saveImage(_ image: UIImage?)
 }
 
-class Photo: PhotoProtocol {
+class PhotoService: PhotoProtocol {
     func saveImage(_ image: UIImage?) {
         guard let image = image else { return }
         
