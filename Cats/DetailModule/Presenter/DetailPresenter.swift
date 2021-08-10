@@ -13,18 +13,20 @@ protocol DetailViewProtocol: AnyObject {
 
 protocol DetailViewPresenterProtcol: AnyObject {
     var cat: Cat { get set }
-    init(view: DetailViewProtocol, photoService: PhotoProtocol, cat: Cat)
+    init(view: DetailViewProtocol, router: RouterProtocol, photoService: PhotoProtocol, cat: Cat)
     func download()
     func favourite()
 }
 
 class DetailPresenter: DetailViewPresenterProtcol {
     weak var view: DetailViewProtocol?
+    var router: RouterProtocol?
     var photoService: PhotoProtocol?
     var cat: Cat
     
-    required init(view: DetailViewProtocol, photoService: PhotoProtocol, cat: Cat) {
+    required init(view: DetailViewProtocol, router: RouterProtocol, photoService: PhotoProtocol, cat: Cat) {
         self.view = view
+        self.router = router
         self.photoService = photoService
         self.cat = cat
     }

@@ -15,7 +15,7 @@ protocol MainViewProtocol: AnyObject {
 
 protocol MainViewPresenterProtocol: AnyObject {
     var cats: [Cat]? { get set }
-    init(view: MainViewProtocol, networkManager: NetworkProtocol)
+    init(view: MainViewProtocol, router: RouterProtocol, networkManager: NetworkProtocol)
     func loadCats()
     func tapOnTheCat(cat: Cat)
     func reloadData()
@@ -23,11 +23,13 @@ protocol MainViewPresenterProtocol: AnyObject {
 
 class MainPresenter: MainViewPresenterProtocol {
     weak var view: MainViewProtocol?
+    var router: RouterProtocol?
     var networkManager: NetworkProtocol
     var cats: [Cat]?
     
-    required init(view: MainViewProtocol, networkManager: NetworkProtocol) {
+    required init(view: MainViewProtocol, router: RouterProtocol, networkManager: NetworkProtocol) {
         self.view = view
+        self.router = router
         self.networkManager = networkManager
         loadCats()
     }
@@ -52,7 +54,7 @@ class MainPresenter: MainViewPresenterProtocol {
     }
     
     func tapOnTheCat(cat: Cat) {
-        print(cat)
+        router?.showDetail(cat: cat)
     }
     
     func reloadData() {
