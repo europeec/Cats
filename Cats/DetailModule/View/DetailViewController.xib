@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,24 +23,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="sxB-Te-2bR">
-                    <rect key="frame" x="87" y="144" width="240" height="608"/>
+                    <rect key="frame" x="87" y="223" width="240" height="450"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="llI-zy-GTW">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="532"/>
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="374"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="eoM-YZ-d1w">
-                            <rect key="frame" x="55" y="558" width="130" height="50"/>
+                            <rect key="frame" x="76" y="400" width="88" height="50"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGb-Kg-h5T">
-                                    <rect key="frame" x="0.0" y="0.0" width="46" height="50"/>
-                                    <state key="normal" title="Button"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGb-Kg-h5T">
+                                    <rect key="frame" x="0.0" y="0.0" width="23" height="50"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <state key="normal">
+                                        <color key="titleColor" systemColor="labelColor"/>
+                                        <imageReference key="image" image="square.and.arrow.down" catalog="system" symbolScale="large"/>
+                                    </state>
                                     <connections>
                                         <action selector="download:" destination="-1" eventType="touchUpInside" id="wgT-4i-76I"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXf-uH-NBw">
-                                    <rect key="frame" x="84" y="0.0" width="46" height="50"/>
-                                    <state key="normal" title="Button"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXf-uH-NBw">
+                                    <rect key="frame" x="61" y="0.0" width="27" height="50"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
+                                    </state>
                                     <connections>
                                         <action selector="favourite:" destination="-1" eventType="touchUpInside" id="fjs-su-yw6"/>
                                     </connections>
@@ -50,19 +57,27 @@
                             </constraints>
                         </stackView>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="450" id="Dli-0Z-1Qs"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="RFM-xC-PhJ"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="sxB-Te-2bR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HJH-p2-rj3"/>
-                <constraint firstItem="sxB-Te-2bR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="HWe-zs-ikZ"/>
                 <constraint firstItem="sxB-Te-2bR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="tWy-ea-dwl"/>
             </constraints>
             <point key="canvasLocation" x="-10" y="109"/>
         </view>
     </objects>
     <resources>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -10,7 +10,8 @@ import UIKit
 protocol RouterMainProtocol: AnyObject {
     var navigationController: UINavigationController? { get set }
     var builder: BuilderProtocol? { get set }
-    func initialViewController()
+    func initialMainViewController()
+    func initialFavouriteViewController()
 }
 
 protocol RouterProtocol: RouterMainProtocol {
@@ -27,11 +28,15 @@ class Router: RouterProtocol {
         self.builder = builder
     }
     
-    func initialViewController() {
+    func initialMainViewController() {
         if let navigationController = navigationController {
             guard let mainViewController = builder?.createMainModule(router: self) else { return }
             navigationController.viewControllers = [mainViewController]
         }
+    }
+    
+    func initialFavouriteViewController() {
+        // 
     }
     
     func showDetail(cat: Cat) {

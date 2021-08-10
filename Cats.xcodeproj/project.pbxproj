@@ -28,6 +28,8 @@
 		F02D93C626C16CA50034736A /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93C526C16CA50034736A /* SearchModel.swift */; };
 		F02D93C926C187440034736A /* CatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93C726C187440034736A /* CatCollectionViewCell.swift */; };
 		F02D93CA26C187440034736A /* CatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F02D93C826C187440034736A /* CatCollectionViewCell.xib */; };
+		F0C1B2DE26C30E7C00C18543 /* FavouritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1B2DD26C30E7C00C18543 /* FavouritePresenter.swift */; };
+		F0C1B2E026C30F8300C18543 /* MemoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1B2DF26C30F8300C18543 /* MemoryManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		F02D93C526C16CA50034736A /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		F02D93C726C187440034736A /* CatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCollectionViewCell.swift; sourceTree = "<group>"; };
 		F02D93C826C187440034736A /* CatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatCollectionViewCell.xib; sourceTree = "<group>"; };
+		F0C1B2DD26C30E7C00C18543 /* FavouritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePresenter.swift; sourceTree = "<group>"; };
+		F0C1B2DF26C30F8300C18543 /* MemoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 				F02D93C226C1672B0034736A /* ServiceLayer */,
 				F02D93B926C1657E0034736A /* MainModule */,
 				F0111C0A26C2AE1E0018DB37 /* DetailModule */,
+				F0C1B2D926C30E3800C18543 /* FavouriteModule */,
 				F02D93A526C1640F0034736A /* Assets.xcassets */,
 				F02D93A726C1640F0034736A /* LaunchScreen.storyboard */,
 				F02D93AA26C1640F0034736A /* Info.plist */,
@@ -179,6 +184,7 @@
 			children = (
 				F02D93C326C167450034736A /* NetworkManager.swift */,
 				F0111C1226C2AED40018DB37 /* PhotoService.swift */,
+				F0C1B2DF26C30F8300C18543 /* MemoryManager.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -190,6 +196,38 @@
 				F02D93C826C187440034736A /* CatCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F0C1B2D926C30E3800C18543 /* FavouriteModule */ = {
+			isa = PBXGroup;
+			children = (
+				F0C1B2DC26C30E5A00C18543 /* Model */,
+				F0C1B2DB26C30E5500C18543 /* View */,
+				F0C1B2DA26C30E4E00C18543 /* Presenter */,
+			);
+			path = FavouriteModule;
+			sourceTree = "<group>";
+		};
+		F0C1B2DA26C30E4E00C18543 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F0C1B2DD26C30E7C00C18543 /* FavouritePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F0C1B2DB26C30E5500C18543 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0C1B2DC26C30E5A00C18543 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,11 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C1B2DE26C30E7C00C18543 /* FavouritePresenter.swift in Sources */,
 				F02D93A426C1640C0034736A /* Cats.xcdatamodeld in Sources */,
 				F02D93BF26C1661C0034736A /* MainPresenter.swift in Sources */,
 				F02D93C926C187440034736A /* CatCollectionViewCell.swift in Sources */,
 				F0111C1026C2AE820018DB37 /* DetailViewController.swift in Sources */,
 				F02D939E26C1640C0034736A /* ViewController.swift in Sources */,
+				F0C1B2E026C30F8300C18543 /* MemoryManager.swift in Sources */,
 				F0111C1526C2B91E0018DB37 /* DetailPresenter.swift in Sources */,
 				F02D93C626C16CA50034736A /* SearchModel.swift in Sources */,
 				F00BF59226C2C18800C64048 /* Router.swift in Sources */,

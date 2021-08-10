@@ -18,6 +18,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        show()
     }
     
     @IBAction func download(_ sender: Any) {

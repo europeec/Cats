@@ -14,11 +14,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let builder = Builder()
-        let navigationController = UINavigationController()
-        let router = Router(navigationController: navigationController, builder: builder)
-        router.initialViewController()
-        window?.rootViewController = navigationController
+        
+        // Main Screen
+        let mainBuilder = Builder()
+        let mainNavigationController = UINavigationController()
+        let mainRouter = Router(navigationController: mainNavigationController, builder: mainBuilder)
+        mainRouter.initialMainViewController()
+        mainNavigationController.tabBarItem = UITabBarItem(title: "Cats",
+                                                           image: UIImage(systemName: "globe"),
+                                                           tag: 0)
+        
+        // Favourite screen
+        let favouriteBuilder = Builder()
+        let favouriteNavigationController = UINavigationController()
+        let favouriteRouter = Router(navigationController: favouriteNavigationController,
+                                     builder: favouriteBuilder)
+        favouriteRouter.initialFavouriteViewController()
+        favouriteNavigationController.tabBarItem = UITabBarItem(title: "Favourite",
+                                                                image: UIImage(systemName: "star"),
+                                                                tag: 1)
+        
+        
+        let tabBar = UITabBarController()
+        tabBar.viewControllers = [mainNavigationController, favouriteNavigationController]
+        window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
     }
 
