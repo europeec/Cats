@@ -17,7 +17,7 @@ class CatCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
     
     public func configure(with image: UIImage?, isFavourite: Bool) {

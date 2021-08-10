@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
     var presenter: MainViewPresenterProtocol!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    var updating = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,10 @@ class MainViewController: UIViewController {
     }
     
     @objc func reload() {
-        presenter.reloadData()
+        if !updating {
+            presenter.reloadData()
+            updating = true
+        }
     }
 }
 
@@ -51,6 +55,7 @@ extension MainViewController: MainViewProtocol {
                 subview.removeFromSuperview()
             }
         }
+        updating = false
         collectionView.isHidden = false
         collectionView.reloadData()
     }
@@ -73,8 +78,6 @@ extension MainViewController: UICollectionViewDataSource {
         cell.configure(with: image, isFavourite: false)
         return cell 
     }
-    
-    
 }
 
 extension MainViewController: UICollectionViewDelegate {
