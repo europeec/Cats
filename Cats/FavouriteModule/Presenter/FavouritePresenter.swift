@@ -20,3 +20,28 @@ protocol FavouriteViewPresenterProtocol: AnyObject {
     func deleteCat()
 }
 
+class FavouritePresenter: FavouriteViewPresenterProtocol {
+    weak var view: FavouriteViewProtocol?
+    var router: RouterProtocol?
+    var memory: MemoryProtocol
+    var cats: [Cat]?
+    
+    required init(view: FavouriteViewProtocol, router: RouterProtocol, memoryManager: MemoryProtocol) {
+        self.view = view
+        self.router = router
+        self.memory = memoryManager
+        loadCats()
+    }
+    
+    func loadCats() {
+        cats = memory.fetch()
+    }
+    
+    func tapOnTheCat(cat: Cat) {
+        router?.showDetail(cat: cat)
+    }
+    
+    func deleteCat() {
+        
+    }
+}
