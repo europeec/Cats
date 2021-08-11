@@ -11,3 +11,4 @@
 
 ---
 иконка отсюда: [тык](https://www.clipartmax.com/middle/m2i8m2K9Z5G6K9N4_cat-food-kitten-computer-icons-clip-art-cat-food-kitten-computer-icons/)
+api с котиками: [тык](https://thecatapi.com)
