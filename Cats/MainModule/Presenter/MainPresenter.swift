@@ -19,6 +19,7 @@ protocol MainViewPresenterProtocol: AnyObject {
     func loadCats()
     func tapOnTheCat(cat: Cat)
     func reloadData()
+    func addMoreData()
 }
 
 class MainPresenter: MainViewPresenterProtocol {
@@ -59,5 +60,22 @@ class MainPresenter: MainViewPresenterProtocol {
     
     func reloadData() {
         loadCats()
+    }
+    
+    func addMoreData() {
+        networkManager.getCats { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let newCats):
+                if self.cats == nil {
+                    self.cats = newCats
+                } else {
+                    self.cats! += newCats
+                }
+                self.view?.success()
+            case .failure(_):
+                self.view?.failure()
+            }
+        }
     }
 }

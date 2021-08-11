@@ -15,6 +15,7 @@ protocol FavouriteViewProtocol: AnyObject {
 protocol FavouriteViewPresenterProtocol: AnyObject {
     var cats: [Cat]? { get set }
     var catsEntity: [CatsEntity]? { get set }
+    var isEmpty: Bool { get }
     init(view: FavouriteViewProtocol, router: RouterProtocol, memoryManager: MemoryProtocol)
     func loadCats()
     func tapOnTheCat(cat: CatsEntity)
@@ -26,6 +27,13 @@ class FavouritePresenter: FavouriteViewPresenterProtocol {
     var memory: MemoryProtocol
     var cats: [Cat]?
     var catsEntity: [CatsEntity]?
+    var isEmpty: Bool {
+        if cats == nil {
+            return true
+        } else {
+            return cats!.isEmpty
+        }
+    }
     
     required init(view: FavouriteViewProtocol, router: RouterProtocol, memoryManager: MemoryProtocol) {
         self.view = view

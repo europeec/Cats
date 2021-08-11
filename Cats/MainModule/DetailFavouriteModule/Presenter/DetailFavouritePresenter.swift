@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol DetailFavouriteViewProtocol: AnyObject {
+    func show()
+    func confirmDelete()
+}
+
 protocol DetailFavouriteViewPresenterProtocol: AnyObject {
     var catEntity: CatsEntity { get set }
     var cat: Cat? { get set }
-    init(view: DetailViewProtocol, router: RouterProtocol, photoService: PhotoProtocol, catEntity: CatsEntity, cat: Cat, memoryService: MemoryProtocol?)
+    init(view: DetailFavouriteViewProtocol, router: RouterProtocol, photoService: PhotoProtocol, catEntity: CatsEntity, cat: Cat, memoryService: MemoryProtocol?)
     func download()
     func favourite()
     func deleteCat()
@@ -18,14 +23,14 @@ protocol DetailFavouriteViewPresenterProtocol: AnyObject {
 }
 
 class DetailFavouritePresenter: DetailFavouriteViewPresenterProtocol {
-    weak var view: DetailViewProtocol?
+    weak var view: DetailFavouriteViewProtocol?
     var router: RouterProtocol?
     var photoService: PhotoProtocol?
     var memory: MemoryProtocol?
     var catEntity: CatsEntity
     var cat: Cat?
     
-    required init(view: DetailViewProtocol,
+    required init(view: DetailFavouriteViewProtocol,
                   router: RouterProtocol,
                   photoService: PhotoProtocol,
                   catEntity: CatsEntity,

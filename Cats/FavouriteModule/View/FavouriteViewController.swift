@@ -14,18 +14,18 @@ class FavouriteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Избранное"
         
         collectionView.register(FavouriteCollectionViewCell.nib, forCellWithReuseIdentifier: FavouriteCollectionViewCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
-        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         presenter.loadCats()
-        collectionView.reloadData()
+        show()
+        if presenter.isEmpty { empty() }
     }
 }
 
@@ -38,7 +38,9 @@ extension FavouriteViewController: FavouriteViewProtocol {
     }
     
     func empty() {
-        
+        let alert = UIAlertController(title: "Тут никого нет..", message: "Добавьте котиков в избранные", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okks..", style: .default))
+        self.present(alert, animated: true)
     }
 }
 

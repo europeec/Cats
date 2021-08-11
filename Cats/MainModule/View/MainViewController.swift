@@ -51,14 +51,19 @@ extension MainViewController: MainViewProtocol {
     }
     
     func success() {
-        for subview in view.subviews {
-            if subview as? UIActivityIndicatorView != nil {
-                subview.removeFromSuperview()
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            if self.updating {
+                for subview in self.view.subviews {
+                    if subview as? UIActivityIndicatorView != nil {
+                        subview.removeFromSuperview()
+                    }
+                }
+                self.updating = false
+                self.collectionView.isHidden = false
             }
+            self.collectionView.reloadData()
         }
-        updating = false
-        collectionView.isHidden = false
-        collectionView.reloadData()
     }
     
     func failure() {
@@ -78,6 +83,13 @@ extension MainViewController: UICollectionViewDataSource {
         let image = presenter.cats?[indexPath.row].image
         cell.configure(with: image, isFavourite: false)
         return cell 
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cats = presenter.cats else { return }
+        if indexPath.row == cats.count - 6 {
+            presenter.addMoreData()
+        }
     }
 }
 
