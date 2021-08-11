@@ -19,27 +19,17 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SjU-gm-0v3">
                         <rect key="frame" x="0.0" y="0.0" width="271" height="274"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ufE-ei-qiJ">
-                        <rect key="frame" x="192" y="20" width="50" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="50" id="1bf-yf-thc"/>
-                            <constraint firstAttribute="width" constant="50" id="Q69-Sr-Tpz"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="SjU-gm-0v3" secondAttribute="bottom" id="AvT-3v-0Kw"/>
                 <constraint firstItem="SjU-gm-0v3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SZf-yo-K5h"/>
-                <constraint firstAttribute="trailing" secondItem="ufE-ei-qiJ" secondAttribute="trailing" constant="29" id="VJd-hw-aeP"/>
                 <constraint firstAttribute="trailing" secondItem="SjU-gm-0v3" secondAttribute="trailing" id="ova-jT-Vz5"/>
-                <constraint firstItem="ufE-ei-qiJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="rZi-2d-UDn"/>
                 <constraint firstItem="SjU-gm-0v3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rlf-f2-hJH"/>
             </constraints>
             <size key="customSize" width="271" height="274"/>
             <connections>
-                <outlet property="favouriteView" destination="ufE-ei-qiJ" id="EF9-1a-VqI"/>
                 <outlet property="imageView" destination="SjU-gm-0v3" id="xfI-Be-Cgf"/>
             </connections>
             <point key="canvasLocation" x="299.27536231884062" y="178.125"/>

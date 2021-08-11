@@ -16,7 +16,6 @@
 		F02D939C26C1640C0034736A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D939B26C1640C0034736A /* SceneDelegate.swift */; };
 		F02D939E26C1640C0034736A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D939D26C1640C0034736A /* ViewController.swift */; };
 		F02D93A126C1640C0034736A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02D939F26C1640C0034736A /* Main.storyboard */; };
-		F02D93A426C1640C0034736A /* Cats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F02D93A226C1640C0034736A /* Cats.xcdatamodeld */; };
 		F02D93A626C1640F0034736A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02D93A526C1640F0034736A /* Assets.xcassets */; };
 		F02D93A926C1640F0034736A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02D93A726C1640F0034736A /* LaunchScreen.storyboard */; };
 		F02D93B626C1656B0034736A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D93B426C1656B0034736A /* MainViewController.swift */; };
@@ -30,6 +29,13 @@
 		F02D93CA26C187440034736A /* CatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F02D93C826C187440034736A /* CatCollectionViewCell.xib */; };
 		F0C1B2DE26C30E7C00C18543 /* FavouritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1B2DD26C30E7C00C18543 /* FavouritePresenter.swift */; };
 		F0C1B2E026C30F8300C18543 /* MemoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1B2DF26C30F8300C18543 /* MemoryManager.swift */; };
+		F0C1B2E526C3AD1D00C18543 /* Cats.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = F02D93A226C1640C0034736A /* Cats.xcdatamodeld */; };
+		F0C1B2E826C3AFB200C18543 /* CatsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1B2E626C3AFB200C18543 /* CatsEntity+CoreDataClass.swift */; };
+		F0C1B2E926C3AFB200C18543 /* CatsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1B2E726C3AFB200C18543 /* CatsEntity+CoreDataProperties.swift */; };
+		F0C1B2EC26C3B48800C18543 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1B2EA26C3B48800C18543 /* FavouriteViewController.swift */; };
+		F0C1B2ED26C3B48800C18543 /* FavouriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C1B2EB26C3B48800C18543 /* FavouriteViewController.xib */; };
+		F0C1B2F026C3B59000C18543 /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1B2EE26C3B59000C18543 /* FavouriteCollectionViewCell.swift */; };
+		F0C1B2F126C3B59000C18543 /* FavouriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C1B2EF26C3B59000C18543 /* FavouriteCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +64,12 @@
 		F02D93C826C187440034736A /* CatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatCollectionViewCell.xib; sourceTree = "<group>"; };
 		F0C1B2DD26C30E7C00C18543 /* FavouritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePresenter.swift; sourceTree = "<group>"; };
 		F0C1B2DF26C30F8300C18543 /* MemoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryManager.swift; sourceTree = "<group>"; };
+		F0C1B2E626C3AFB200C18543 /* CatsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F0C1B2E726C3AFB200C18543 /* CatsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F0C1B2EA26C3B48800C18543 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		F0C1B2EB26C3B48800C18543 /* FavouriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteViewController.xib; sourceTree = "<group>"; };
+		F0C1B2EE26C3B59000C18543 /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		F0C1B2EF26C3B59000C18543 /* FavouriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,8 @@
 		F02D938D26C1640C0034736A = {
 			isa = PBXGroup;
 			children = (
+				F0C1B2E626C3AFB200C18543 /* CatsEntity+CoreDataClass.swift */,
+				F0C1B2E726C3AFB200C18543 /* CatsEntity+CoreDataProperties.swift */,
 				F02D939826C1640C0034736A /* Cats */,
 				F02D939726C1640C0034736A /* Products */,
 			);
@@ -219,6 +233,9 @@
 		F0C1B2DB26C30E5500C18543 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F0C1B2EA26C3B48800C18543 /* FavouriteViewController.swift */,
+				F0C1B2EB26C3B48800C18543 /* FavouriteViewController.xib */,
+				F0C1B2F226C3B59400C18543 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,6 +245,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F0C1B2F226C3B59400C18543 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0C1B2EE26C3B59000C18543 /* FavouriteCollectionViewCell.swift */,
+				F0C1B2EF26C3B59000C18543 /* FavouriteCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,9 +313,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C1B2ED26C3B48800C18543 /* FavouriteViewController.xib in Resources */,
+				F0C1B2E526C3AD1D00C18543 /* Cats.xcdatamodeld in Resources */,
 				F02D93A926C1640F0034736A /* LaunchScreen.storyboard in Resources */,
 				F0111C1126C2AE820018DB37 /* DetailViewController.xib in Resources */,
 				F02D93A626C1640F0034736A /* Assets.xcassets in Resources */,
+				F0C1B2F126C3B59000C18543 /* FavouriteCollectionViewCell.xib in Resources */,
 				F02D93CA26C187440034736A /* CatCollectionViewCell.xib in Resources */,
 				F02D93A126C1640C0034736A /* Main.storyboard in Resources */,
 				F02D93B726C1656B0034736A /* MainViewController.xib in Resources */,
@@ -304,9 +333,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C1B2DE26C30E7C00C18543 /* FavouritePresenter.swift in Sources */,
-				F02D93A426C1640C0034736A /* Cats.xcdatamodeld in Sources */,
 				F02D93BF26C1661C0034736A /* MainPresenter.swift in Sources */,
 				F02D93C926C187440034736A /* CatCollectionViewCell.swift in Sources */,
+				F0C1B2E826C3AFB200C18543 /* CatsEntity+CoreDataClass.swift in Sources */,
 				F0111C1026C2AE820018DB37 /* DetailViewController.swift in Sources */,
 				F02D939E26C1640C0034736A /* ViewController.swift in Sources */,
 				F0C1B2E026C30F8300C18543 /* MemoryManager.swift in Sources */,
@@ -315,9 +344,12 @@
 				F00BF59226C2C18800C64048 /* Router.swift in Sources */,
 				F0111C1326C2AED40018DB37 /* PhotoService.swift in Sources */,
 				F02D939A26C1640C0034736A /* AppDelegate.swift in Sources */,
+				F0C1B2F026C3B59000C18543 /* FavouriteCollectionViewCell.swift in Sources */,
 				F02D93C426C167450034736A /* NetworkManager.swift in Sources */,
+				F0C1B2E926C3AFB200C18543 /* CatsEntity+CoreDataProperties.swift in Sources */,
 				F02D93C126C166810034736A /* Cat.swift in Sources */,
 				F02D939C26C1640C0034736A /* SceneDelegate.swift in Sources */,
+				F0C1B2EC26C3B48800C18543 /* FavouriteViewController.swift in Sources */,
 				F02D93B626C1656B0034736A /* MainViewController.swift in Sources */,
 				F02D93BD26C1659B0034736A /* Builder.swift in Sources */,
 			);

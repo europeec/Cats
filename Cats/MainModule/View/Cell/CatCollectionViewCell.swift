@@ -13,7 +13,6 @@ class CatCollectionViewCell: UICollectionViewCell {
     static let nib = UINib(nibName: identifier, bundle: nil)
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var favouriteView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +26,5 @@ class CatCollectionViewCell: UICollectionViewCell {
             self?.alpha = 1
             self?.imageView.image = image
         }
-        // todo: favourite
     }
 }

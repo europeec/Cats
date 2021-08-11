@@ -23,7 +23,6 @@ class Builder: BuilderProtocol {
 
     func createDetailModule(with cat: Cat, router: RouterProtocol) -> UIViewController {
         let view = DetailViewController()
-        
         let photoService = PhotoService()
         let presenter = DetailPresenter(view: view, router: router, photoService: photoService, cat: cat)
         view.presenter = presenter

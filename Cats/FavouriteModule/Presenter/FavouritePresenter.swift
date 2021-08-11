@@ -19,3 +19,4 @@ protocol FavouriteViewPresenterProtocol: AnyObject {
     func tapOnTheCat(cat: Cat)
     func deleteCat()
 }
+

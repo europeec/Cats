@@ -37,7 +37,8 @@ class DetailPresenter: DetailViewPresenterProtcol {
     }
     
     func favourite() {
-        
+        let memory = MemoryService()
+        memory.save(cat: cat)
     }
     
 }
