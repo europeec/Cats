@@ -21,11 +21,12 @@ class MainViewController: UIViewController {
         
         collectionView.register(CatCollectionViewCell.nib, forCellWithReuseIdentifier: CatCollectionViewCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
+        
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 190, height: 200)
+        let size = view.frame.size.width / 2 - 13
+        layout.itemSize = CGSize(width: size, height: size)
         layout.minimumInteritemSpacing = 3
         layout.minimumLineSpacing = 3
-
         collectionView.collectionViewLayout = layout
     }
     

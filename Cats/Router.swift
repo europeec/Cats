@@ -16,6 +16,7 @@ protocol RouterMainProtocol: AnyObject {
 
 protocol RouterProtocol: RouterMainProtocol {
     func showDetail(cat: Cat)
+    func showFavouriteDetail(catEntity: CatsEntity)
     func popToRoot()
 }
 
@@ -36,13 +37,23 @@ class Router: RouterProtocol {
     }
     
     func initialFavouriteViewController() {
-        // 
+        if let navigationController = navigationController {
+            guard let favouriteViewController = builder?.createFavouriteModule(router: self) else { return }
+            navigationController.viewControllers = [favouriteViewController]
+        }
     }
     
     func showDetail(cat: Cat) {
         if let navigationController = navigationController {
             guard let detailViewController = builder?.createDetailModule(with: cat, router: self) else { return }
             navigationController.pushViewController(detailViewController, animated: true)
+        }
+    }
+    
+    func showFavouriteDetail(catEntity: CatsEntity) {
+        if let navigationController = navigationController {
+            guard let detailFavouriteViewController = builder?.createDetailFavouriteModule(with: catEntity, router: self) else { return }
+            navigationController.pushViewController(detailFavouriteViewController, animated: true)
         }
     }
     

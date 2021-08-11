@@ -17,6 +17,15 @@ class FavouriteViewController: UIViewController {
         
         collectionView.register(FavouriteCollectionViewCell.nib, forCellWithReuseIdentifier: FavouriteCollectionViewCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
+        
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter.loadCats()
+        collectionView.reloadData()
     }
 }
 
@@ -48,9 +57,18 @@ extension FavouriteViewController: UICollectionViewDataSource {
         return cell
     }
     
-    
 }
 
 extension FavouriteViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cat = presenter.catsEntity![indexPath.row]
+        presenter.tapOnTheCat(cat: cat)
+    }
+}
+
+extension FavouriteViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let side = UIScreen.main.bounds.size.width
+        return CGSize(width: side, height: side)
+    }
 }

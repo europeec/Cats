@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var favoutireButton: UIButton!
     
     var presenter: DetailViewPresenterProtcol!
+    var isFavourite = false 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,18 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func favourite(_ sender: Any) {
-        presenter.favourite()
+        if !isFavourite {
+            presenter.favourite()
+            updateFavouriteButtonImage()
+            isFavourite = true 
+        }
+    }
+    
+    func updateFavouriteButtonImage() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.favoutireButton.setImage(self.isFavourite ? UIImage(systemName: "star.fill") : UIImage(systemName: "star"), for: .normal)
+        }
     }
 }
 
@@ -35,7 +47,6 @@ extension DetailViewController: DetailViewProtocol {
         DispatchQueue.main.async { [weak self] in
             let image = self?.presenter.cat.image
             self?.imageView.image = image
-            
         }
     }
 }

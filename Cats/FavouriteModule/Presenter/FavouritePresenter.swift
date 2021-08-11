@@ -14,10 +14,10 @@ protocol FavouriteViewProtocol: AnyObject {
 
 protocol FavouriteViewPresenterProtocol: AnyObject {
     var cats: [Cat]? { get set }
+    var catsEntity: [CatsEntity]? { get set }
     init(view: FavouriteViewProtocol, router: RouterProtocol, memoryManager: MemoryProtocol)
     func loadCats()
-    func tapOnTheCat(cat: Cat)
-    func deleteCat()
+    func tapOnTheCat(cat: CatsEntity)
 }
 
 class FavouritePresenter: FavouriteViewPresenterProtocol {
@@ -25,6 +25,7 @@ class FavouritePresenter: FavouriteViewPresenterProtocol {
     var router: RouterProtocol?
     var memory: MemoryProtocol
     var cats: [Cat]?
+    var catsEntity: [CatsEntity]?
     
     required init(view: FavouriteViewProtocol, router: RouterProtocol, memoryManager: MemoryProtocol) {
         self.view = view
@@ -34,14 +35,11 @@ class FavouritePresenter: FavouriteViewPresenterProtocol {
     }
     
     func loadCats() {
-        cats = memory.fetch()
+        catsEntity = memory.fetch()
+        cats = memory.convertArray(entityArray: catsEntity)
     }
     
-    func tapOnTheCat(cat: Cat) {
-        router?.showDetail(cat: cat)
-    }
-    
-    func deleteCat() {
-        
+    func tapOnTheCat(cat: CatsEntity) {
+        router?.showFavouriteDetail(catEntity: cat)
     }
 }

@@ -36,6 +36,9 @@
 		F0C1B2ED26C3B48800C18543 /* FavouriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C1B2EB26C3B48800C18543 /* FavouriteViewController.xib */; };
 		F0C1B2F026C3B59000C18543 /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1B2EE26C3B59000C18543 /* FavouriteCollectionViewCell.swift */; };
 		F0C1B2F126C3B59000C18543 /* FavouriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C1B2EF26C3B59000C18543 /* FavouriteCollectionViewCell.xib */; };
+		F0C1B2FF26C3E21000C18543 /* DetailFavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1B2FD26C3E21000C18543 /* DetailFavouriteViewController.swift */; };
+		F0C1B30026C3E21000C18543 /* DetailFavouriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C1B2FE26C3E21000C18543 /* DetailFavouriteViewController.xib */; };
+		F0C1B30226C3E3FB00C18543 /* DetailFavouritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1B30126C3E3FB00C18543 /* DetailFavouritePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		F0C1B2EB26C3B48800C18543 /* FavouriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteViewController.xib; sourceTree = "<group>"; };
 		F0C1B2EE26C3B59000C18543 /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0C1B2EF26C3B59000C18543 /* FavouriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCollectionViewCell.xib; sourceTree = "<group>"; };
+		F0C1B2FD26C3E21000C18543 /* DetailFavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFavouriteViewController.swift; sourceTree = "<group>"; };
+		F0C1B2FE26C3E21000C18543 /* DetailFavouriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailFavouriteViewController.xib; sourceTree = "<group>"; };
+		F0C1B30126C3E3FB00C18543 /* DetailFavouritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFavouritePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 				F02D93C226C1672B0034736A /* ServiceLayer */,
 				F02D93B926C1657E0034736A /* MainModule */,
 				F0111C0A26C2AE1E0018DB37 /* DetailModule */,
+				F0C1B2F526C3DFAB00C18543 /* DetailFavouriteModule */,
 				F0C1B2D926C30E3800C18543 /* FavouriteModule */,
 				F02D93A526C1640F0034736A /* Assets.xcassets */,
 				F02D93A726C1640F0034736A /* LaunchScreen.storyboard */,
@@ -256,6 +263,41 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F0C1B2F526C3DFAB00C18543 /* DetailFavouriteModule */ = {
+			isa = PBXGroup;
+			children = (
+				F0C1B2F626C3DFAB00C18543 /* Model */,
+				F0C1B2FA26C3DFAB00C18543 /* Presenter */,
+				F0C1B2F726C3DFAB00C18543 /* View */,
+			);
+			name = DetailFavouriteModule;
+			path = MainModule/DetailFavouriteModule;
+			sourceTree = "<group>";
+		};
+		F0C1B2F626C3DFAB00C18543 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0C1B2F726C3DFAB00C18543 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0C1B2FD26C3E21000C18543 /* DetailFavouriteViewController.swift */,
+				F0C1B2FE26C3E21000C18543 /* DetailFavouriteViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0C1B2FA26C3DFAB00C18543 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F0C1B30126C3E3FB00C18543 /* DetailFavouritePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C1B2ED26C3B48800C18543 /* FavouriteViewController.xib in Resources */,
+				F0C1B30026C3E21000C18543 /* DetailFavouriteViewController.xib in Resources */,
 				F0C1B2E526C3AD1D00C18543 /* Cats.xcdatamodeld in Resources */,
 				F02D93A926C1640F0034736A /* LaunchScreen.storyboard in Resources */,
 				F0111C1126C2AE820018DB37 /* DetailViewController.xib in Resources */,
@@ -333,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C1B2DE26C30E7C00C18543 /* FavouritePresenter.swift in Sources */,
+				F0C1B30226C3E3FB00C18543 /* DetailFavouritePresenter.swift in Sources */,
 				F02D93BF26C1661C0034736A /* MainPresenter.swift in Sources */,
 				F02D93C926C187440034736A /* CatCollectionViewCell.swift in Sources */,
 				F0C1B2E826C3AFB200C18543 /* CatsEntity+CoreDataClass.swift in Sources */,
@@ -347,6 +391,7 @@
 				F0C1B2F026C3B59000C18543 /* FavouriteCollectionViewCell.swift in Sources */,
 				F02D93C426C167450034736A /* NetworkManager.swift in Sources */,
 				F0C1B2E926C3AFB200C18543 /* CatsEntity+CoreDataProperties.swift in Sources */,
+				F0C1B2FF26C3E21000C18543 /* DetailFavouriteViewController.swift in Sources */,
 				F02D93C126C166810034736A /* Cat.swift in Sources */,
 				F02D939C26C1640C0034736A /* SceneDelegate.swift in Sources */,
 				F0C1B2EC26C3B48800C18543 /* FavouriteViewController.swift in Sources */,
