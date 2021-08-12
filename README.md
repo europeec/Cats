@@ -10,5 +10,9 @@
 
 
 ---
-- иконка отсюда: [тык](https://www.clipartmax.com/middle/m2i8m2K9Z5G6K9N4_cat-food-kitten-computer-icons-clip-art-cat-food-kitten-computer-icons/)
+- иконка отсюда: [тык](https://tr.pinterest.com/pin/610730399446142330/)
+- конвертер картинки в иконки: [тык](https://makeappicon.com)
 - api с котиками: [тык](https://thecatapi.com)
+
+---
+[![CodeFactor](https://www.codefactor.io/repository/github/europeec/cats/badge)](https://www.codefactor.io/repository/github/europeec/cats)
