@@ -13,7 +13,8 @@ struct Cat {
     var breeds: [BreedsModel]
 }
 
-// MARK: - Breeds 
+// MARK: - Breeds
+// swiftlint:disable all
 struct BreedsModel: Decodable {
     var weight: WeightModel
     var id: String
@@ -49,6 +50,7 @@ struct BreedsModel: Decodable {
     var origin: String
     
 }
+// swiftlint:enable all
 
 struct WeightModel: Decodable {
     var imperial: String

@@ -55,7 +55,8 @@ extension MainViewController: MainViewProtocol {
             guard let self = self else { return }
             if self.updating {
                 for subview in self.view.subviews {
-                    if subview as? UIActivityIndicatorView != nil {
+                    let activity = subview as? UIActivityIndicatorView
+                    if activity != nil {
                         subview.removeFromSuperview()
                     }
                 }
@@ -99,4 +100,3 @@ extension MainViewController: UICollectionViewDelegate {
         presenter.tapOnTheCat(cat: cat)
     }
 }
-

@@ -10,7 +10,7 @@ import UIKit
 protocol BuilderProtocol: AnyObject {
     func createMainModule(router: RouterProtocol) -> UIViewController
     func createDetailFavouriteModule(with catEntity: CatsEntity,
-                            router: RouterProtocol) -> UIViewController
+                                     router: RouterProtocol) -> UIViewController
     func createDetailModule(with cat: Cat, router: RouterProtocol) -> UIViewController
     func createFavouriteModule(router: RouterProtocol) -> UIViewController
 }

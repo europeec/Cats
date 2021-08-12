@@ -43,15 +43,14 @@ class MemoryService: MemoryProtocol {
     }
     
     func saveContext() {
-            if self.managedObjectContext.hasChanges {
-                do {
-                    try self.managedObjectContext.save()
-                }
-                catch let error as NSError? {
-                    print("Error saveContext: \(error!), userInfo: \(error!.userInfo)")
-                }
+        if self.managedObjectContext.hasChanges {
+            do {
+                try self.managedObjectContext.save()
+            } catch let error as NSError? {
+                print("Error saveContext: \(error!), userInfo: \(error!.userInfo)")
             }
         }
+    }
     
     func remove(catEntity: CatsEntity) {
         managedObjectContext.delete(catEntity)
@@ -83,6 +82,3 @@ class MemoryService: MemoryProtocol {
         return cats
     }
 }
-
-
-

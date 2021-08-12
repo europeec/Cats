@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let mainNavigationController = UINavigationController()
         let mainRouter = Router(navigationController: mainNavigationController, builder: mainBuilder)
         mainRouter.initialMainViewController()
-        mainNavigationController.tabBarItem = UITabBarItem(title: "Cats",
+        mainNavigationController.tabBarItem = UITabBarItem(title: "Котики",
                                                            image: UIImage(systemName: "globe"),
                                                            tag: 0)
         
@@ -30,10 +30,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let favouriteRouter = Router(navigationController: favouriteNavigationController,
                                      builder: favouriteBuilder)
         favouriteRouter.initialFavouriteViewController()
-        favouriteNavigationController.tabBarItem = UITabBarItem(title: "Favourite",
+        favouriteNavigationController.tabBarItem = UITabBarItem(title: "Избранное",
                                                                 image: UIImage(systemName: "star"),
                                                                 tag: 1)
-        
         
         let tabBar = UITabBarController()
         tabBar.viewControllers = [mainNavigationController, favouriteNavigationController]
@@ -72,7 +71,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let memory = MemoryService()
         memory.saveContext()
     }
-
-
 }
-

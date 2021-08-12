@@ -38,7 +38,7 @@ extension FavouriteViewController: FavouriteViewProtocol {
     }
     
     func empty() {
-        let alert = UIAlertController(title: "Тут никого нет..", message: "Добавьте котиков в избранные", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Тут никого нет..", message: "Добавьте котиков в избранное", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okks..", style: .default))
         self.present(alert, animated: true)
     }

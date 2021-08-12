@@ -7,6 +7,7 @@
 
 import UIKit
 
+// swiftlint:disable all
 struct SearchModel: Decodable {
     var breeds: [BreedsModel]
     var id: String
@@ -14,3 +15,4 @@ struct SearchModel: Decodable {
     var width: Int
     var height: Int
 }
+// swiftlint:enable all
